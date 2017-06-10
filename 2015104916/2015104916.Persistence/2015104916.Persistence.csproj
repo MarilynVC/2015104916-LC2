@@ -58,12 +58,30 @@
     <Compile Include="EntitiesConfiguration\ParabrisasConfiguration.cs" />
     <Compile Include="EntitiesConfiguration\PropietarioConfiguration.cs" />
     <Compile Include="EntitiesConfiguration\VolanteConfiguration.cs" />
-    <Compile Include="Migrations\201705140520099_UniqueMig.cs" />
-    <Compile Include="Migrations\201705140520099_UniqueMig.Designer.cs">
-      <DependentUpon>201705140520099_UniqueMig.cs</DependentUpon>
+    <Compile Include="Migrations\201706080538355_paaa.cs" />
+    <Compile Include="Migrations\201706080538355_paaa.Designer.cs">
+      <DependentUpon>201706080538355_paaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706081430003_dassss.cs" />
+    <Compile Include="Migrations\201706081430003_dassss.Designer.cs">
+      <DependentUpon>201706081430003_dassss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706082004253_fd.cs" />
+    <Compile Include="Migrations\201706082004253_fd.Designer.cs">
+      <DependentUpon>201706082004253_fd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AsientoRepository.cs" />
+    <Compile Include="Repositories\CarroRepository.cs" />
+    <Compile Include="Repositories\CinturonRepository.cs" />
+    <Compile Include="Repositories\EnsambladoraRepository.cs" />
+    <Compile Include="Repositories\LlantaRepository.cs" />
+    <Compile Include="Repositories\ParabrisasRepository.cs" />
+    <Compile Include="Repositories\PropietarioRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\UnityOfWork.cs" />
+    <Compile Include="Repositories\VolanteRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -76,8 +94,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705140520099_UniqueMig.resx">
-      <DependentUpon>201705140520099_UniqueMig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706080538355_paaa.resx">
+      <DependentUpon>201706080538355_paaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706081430003_dassss.resx">
+      <DependentUpon>201706081430003_dassss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706082004253_fd.resx">
+      <DependentUpon>201706082004253_fd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

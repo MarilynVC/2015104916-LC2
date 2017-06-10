@@ -1,0 +1,40 @@
+﻿@model IEnumerable<_2015104916.Entities.Entities.Llanta>
+
+@{
+    ViewBag.Title = "Llantas - Índice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Indíce</h2>
+
+<p>
+    @Html.ActionLink("Añadir", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Placa del Carro
+        </th>
+        <th>
+           N° de Serie
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Carro.Placa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumSerie)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.LlantaId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.LlantaId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.LlantaId })
+        </td>
+    </tr>
+}
+
+</table>

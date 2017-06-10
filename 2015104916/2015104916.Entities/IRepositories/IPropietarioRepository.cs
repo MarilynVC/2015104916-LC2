@@ -9,6 +9,6 @@ namespace _2015104916.Entities.IRepositories
 {
     public interface IPropietarioRepository
     {
-        IEnumerable<Propietario> GetPropietarioByCarro(Carro carro);
+        
     }
 }

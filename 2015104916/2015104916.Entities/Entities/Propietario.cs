@@ -13,7 +13,6 @@ namespace _2015104916.Entities.Entities
         public string Nombres { set; get; }
         public string Apellidos { set; get; }
         public string Licencia { set; get; }
-        public int CarroId { set; get; }
         public Carro Carro { set; get; }
              
        

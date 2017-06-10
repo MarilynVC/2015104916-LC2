@@ -9,6 +9,6 @@ namespace _2015104916.Entities.IRepositories
 {
     public interface ILlantaRepository
     {
-        IEnumerable<Llanta> GetLlantabyCarro(Carro carro);
+        
     }
 }

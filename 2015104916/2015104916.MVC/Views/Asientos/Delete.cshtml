@@ -1,0 +1,41 @@
+﻿@model _2015104916.Entities.Entities.Asiento
+
+@{
+    ViewBag.Title = "Asientos - Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar Asiento</h2>
+
+<h3>Estás seguro que deseas eliminar esto?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumSerie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumSerie)
+        </dd>
+        <dt>
+            Placa del Carro
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Carro.Placa)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar al Índice", "Index")
+        </div>
+    }
+</div>

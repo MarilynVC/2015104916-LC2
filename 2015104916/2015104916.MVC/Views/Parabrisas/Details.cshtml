@@ -1,0 +1,27 @@
+﻿@model _2015104916.Entities.Entities.Parabrisas
+
+@{
+    ViewBag.Title = "Parabrisas - Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles del Parabrisas</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            N° de Serie
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumSerie)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ParabrisasId }) |
+    @Html.ActionLink("Regresar al Índice", "Index")
+</p>

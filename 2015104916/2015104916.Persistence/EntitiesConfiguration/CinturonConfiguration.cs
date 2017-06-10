@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration;
 using _2015104916.Entities.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _2015104916.Persistence.EntitiesConfiguration
 {
@@ -15,10 +16,15 @@ namespace _2015104916.Persistence.EntitiesConfiguration
            //Table Configuration
            ToTable("Cinturones");
            HasKey(c => c.CinturonId);
-           //Relationship Configuration
-           HasRequired(c => c.Asiento)
-               .WithRequiredDependent(c => c.Cinturon);
+            Property(a => a.CinturonId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            //Relationship Configuration
+            HasRequired(c => c.Asiento)
+                .WithMany(c => c.Cinturones)
+                .HasForeignKey(c => c.AsientoId);
 
-       }
+
+
+        }
     }
 }

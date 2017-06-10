@@ -1,0 +1,58 @@
+﻿@model _2015104916.Entities.Entities.Automovil
+
+@{
+    ViewBag.Title = "Automóviles - Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar Automóvil</h2>
+
+<h3>Estás seguro que deseas eliminar esto?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Placa
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+       
+        <dt>
+            Motor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumSerieMotor)
+        </dd>
+
+        <dt>
+            Chasis
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumSerieChasis)
+        </dd>
+
+        <dt>
+            Tipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoAuto)
+        </dd>
+        
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <center>
+            <div class="form-actions no-color">
+                <input type="submit" value="Eliminar" class="btn btn-default" /> |
+                @Html.ActionLink("Regresar al Índice", "Index")
+            </div>
+        </center>
+    }
+</div>

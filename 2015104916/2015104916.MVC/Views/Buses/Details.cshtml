@@ -1,0 +1,52 @@
+﻿@model _2015104916.Entities.Entities.Bus
+
+@{
+    ViewBag.Title = "Buses - Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles del Bus</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Placa
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+        <dt>
+            Motor
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumSerieMotor)
+        </dd>
+
+        <dt>
+            Chasis
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumSerieChasis)
+        </dd>
+
+        <dt>
+            Tipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoBus)
+        </dd>
+        
+
+    </dl>
+</div>
+<center>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.CarroId }) |
+        @Html.ActionLink("Regresar al Índice", "Index")
+    </p>
+</center>

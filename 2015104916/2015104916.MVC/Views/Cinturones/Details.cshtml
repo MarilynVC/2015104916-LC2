@@ -1,0 +1,37 @@
+﻿@model _2015104916.Entities.Entities.Cinturon
+
+@{
+    ViewBag.Title = "Cinturones - Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles del Cinturón</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+           N° de Serie
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumSerie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Metraje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Metraje)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CinturonId }) |
+    @Html.ActionLink("Regresar al Índice", "Index")
+</p>

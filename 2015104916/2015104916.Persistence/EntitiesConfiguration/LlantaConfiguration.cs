@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration;
 using _2015104916.Entities.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _2015104916.Persistence.EntitiesConfiguration
 {
@@ -15,8 +16,10 @@ namespace _2015104916.Persistence.EntitiesConfiguration
            //Table Configuration
            ToTable("Llantas");
            HasKey(c => c.LlantaId);
-           //Relationship Configuration
-           HasRequired(c => c.Carro)
+            Property(a => a.LlantaId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            //Relationship Configuration
+            HasRequired(c => c.Carro)
                .WithMany(c => c.Llantas);
 
        }

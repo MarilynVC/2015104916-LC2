@@ -9,6 +9,6 @@ namespace _2015104916.Entities.IRepositories
 {
     public interface IParabrisasRepository
     {
-        IEnumerable<Parabrisas> GetParabrisasByCarro(Carro carro);
+      
     }
 }

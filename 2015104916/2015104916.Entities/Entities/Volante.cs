@@ -8,9 +8,9 @@ namespace _2015104916.Entities.Entities
 {
     public class Volante
     {
-        public string NumSerie{set;get;}
         public int VolanteId { set; get; }
-        public int CarroId { set; get; }
+        public string NumSerie{set;get;}
+    
         public Carro Carro { set; get; }
         
 

@@ -10,10 +10,6 @@ namespace _2015104916.Entities.IRepositories
     public interface ICarroRepository
     {
 
-        IEnumerable<Carro> GetCarroByTipoCarro(TipoCarro tipoCarro);
-        IEnumerable<Carro> GetCarroByTipoAuto(TipoAuto tipoAuto);
-        IEnumerable<Carro> GetCarroByTipoBus(TipoBus tipoBus);
-        IEnumerable<Carro> GetCarroByPropietario(Propietario propietario);
-        IEnumerable<Carro> GetCarroByEnsambladora(Ensambladora ensambladora);
+        
     }
 }

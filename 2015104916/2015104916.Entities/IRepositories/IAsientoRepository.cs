@@ -9,7 +9,7 @@ namespace _2015104916.Entities.IRepositories
 {
     public interface IAsientoRepository : IRepository<Asiento>
     {
-        IEnumerable<Asiento> GetAsientoByCarro(Carro carro);
+        
 
     }
 }

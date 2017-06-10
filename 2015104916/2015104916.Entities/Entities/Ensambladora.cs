@@ -11,6 +11,7 @@ namespace _2015104916.Entities.Entities
 
         public List<Carro> Carros { set; get; }
         public int EnsambladoraId { set; get; }
+        public string Nombre { get; set; }
         public void Eliminar(Carro carro)
         {
             Carros.Remove(carro);
@@ -26,11 +27,7 @@ namespace _2015104916.Entities.Entities
         public bool FinalizarPersonalizacion(){
             return false;       
         }
-        public Carro EnsamblarCarro(TipoCarro tipocarro, TipoBus tipobus, TipoAuto tipoauto)
-        {
-            Carro carro=new Carro();
-            return carro;
-        }
+        
         public Ensambladora()
         {
             Carros = new List<Carro>();

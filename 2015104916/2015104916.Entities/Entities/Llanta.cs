@@ -10,7 +10,7 @@ namespace _2015104916.Entities.Entities
     {
         public int LlantaId { set; get; }
         public string NumSerie { set; get; }
-        public int CarroId { set; get; }
+        public int CarroId { get; set; }
         public Carro Carro { set; get; }
 
     }

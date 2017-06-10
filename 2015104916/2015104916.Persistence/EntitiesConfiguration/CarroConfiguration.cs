@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration;
 using _2015104916.Entities.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _2015104916.Persistence.EntitiesConfiguration
 {
@@ -15,12 +16,11 @@ namespace _2015104916.Persistence.EntitiesConfiguration
            //Table Configuration
            ToTable("Carros");
            HasKey(c => c.CarroId);
-           //Relationship Configuration
-           HasRequired(c => c.Ensambladora)
-                .WithMany(c=>c.Carros);
-           HasRequired(c => c.Propietario)
-                .WithRequiredDependent(c => c.Carro);
+           
+            //Relationship Configuration
+            Map<Bus>(m => m.Requires("Discriminator").HasValue("Bus"));
+            Map<Automovil>(m => m.Requires("Discriminator").HasValue("Automovil"));
 
-       }
+        }
     }
 }

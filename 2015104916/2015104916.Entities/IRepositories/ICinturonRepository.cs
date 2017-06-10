@@ -9,8 +9,7 @@ namespace _2015104916.Entities.IRepositories
 {
     public interface ICinturonRepository
     {
-        IEnumerable<Cinturon> GetCinturonbyCarro(Carro carro);
-        IEnumerable<Cinturon> GetCinturonbyAsiento(Asiento asiento);
+        
 
 
     }

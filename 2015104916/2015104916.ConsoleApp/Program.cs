@@ -14,18 +14,8 @@ namespace _2015104916.ConsoleApp
         {
             
             var ensambladora = new Ensambladora();
-            Carro Carro1 = ensambladora.EnsamblarCarro(TipoCarro.Bus, TipoBus.Privado,TipoAuto.Coupe);
-            ensambladora.Agregar(Carro1);
-            Carro Carro2 = ensambladora.EnsamblarCarro(TipoCarro.Bus, TipoBus.Publico, TipoAuto.Coupe);
-            ensambladora.Agregar(Carro2);
-            Carro Carro3 = ensambladora.EnsamblarCarro(TipoCarro.Automovil, TipoBus.Privado, TipoAuto.Sedan);
-            ensambladora.Agregar(Carro3);
-            Carro Carro4 = ensambladora.EnsamblarCarro(TipoCarro.Automovil, TipoBus.Publico, TipoAuto.PickUp);
-            ensambladora.Agregar(Carro4);
-            Carro Carro5 = ensambladora.EnsamblarCarro(TipoCarro.Automovil, TipoBus.Privado, TipoAuto.HatchBack);
-            ensambladora.Agregar(Carro5);
-            Carro Carro6 = ensambladora.EnsamblarCarro(TipoCarro.Automovil, TipoBus.Publico, TipoAuto.Coupe);
-            ensambladora.Agregar(Carro6);
+            
+           
             string opc;
             Console.WriteLine("Desea Iniciar la Personalizacion? Y(Si)/N(No)");
             opc=Console.ReadLine();

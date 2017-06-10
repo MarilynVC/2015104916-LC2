@@ -1,0 +1,33 @@
+﻿@model _2015104916.Entities.Entities.Parabrisas
+
+@{
+    ViewBag.Title = "Parabrisas - Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estás seguro que deseas eliminar esto?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           N° de Serie
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumSerie)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar al Índice", "Index")
+        </div>
+    }
+</div>
